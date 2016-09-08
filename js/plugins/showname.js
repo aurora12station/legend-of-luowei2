@@ -13,18 +13,20 @@ npcName.prototype.initialize = function() {
         // 处理事件name
         var k = 0;
         for(var i=0;i<$dataMap.events.length;i++){
-                if($dataMap.events[i]){
-                        this._eventsName[k] = new Sprite();
-                        this._eventsName[k].id = $dataMap.events[i].id;
-                        this._eventsName[k].name = $dataMap.events[i].name.split('@')[0];
-                        this._eventsName[k].bitmap = new Bitmap(300, 100);
-                        this._eventsName[k].textW = this._eventsName[k].bitmap.measureTextWidth(this._eventsName[k].name);
-                        if($dataMap.events[i].name.split('@').length > 1){
-                                this._eventsName[k].bitmap.textColor = $dataMap.events[i].name.split('@')[1];
-                        };
-                        this._eventsName[k].bitmap.drawText(this._eventsName[k].name, 0, 0,this._eventsName[k].textW , 24, 'center');
-                        k++;
+            if($dataMap.events[i]){
+              if ($dataMap.events[i].name.indexOf("none") != -1 ) {  //未设置为不显示
+                this._eventsName[k] = new Sprite();
+                this._eventsName[k].id = $dataMap.events[i].id;
+                this._eventsName[k].name = $dataMap.events[i].name.split('@')[0];
+                this._eventsName[k].bitmap = new Bitmap(300, 100);
+                this._eventsName[k].textW = this._eventsName[k].bitmap.measureTextWidth(this._eventsName[k].name);
+                if($dataMap.events[i].name.split('@').length > 1){
+                        this._eventsName[k].bitmap.textColor = $dataMap.events[i].name.split('@')[1];
                 };
+                this._eventsName[k].bitmap.drawText(this._eventsName[k].name, 0, 0,this._eventsName[k].textW , 24, 'center');
+                k++;
+              }
+            };
         };
 
         this._Player.textW = this._Player.bitmap.measureTextWidth($gameActors.actor(1).name());
