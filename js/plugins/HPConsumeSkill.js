@@ -3,35 +3,15 @@
 //=============================================================================
 
 /*:
- * @plugindesc make the skill that consumes HP, not only MP and/or TP
+ * @plugindesc 让技能可以消耗HP，而不仅仅是MP和TP
  * @author Sasuke KANNAZUKI
  *
- * @help This plugin does not provide plugin commands.
+ * @help 按照以下格式在技能备注区填写参数：
+ *   <hp_cost:30>  # 该技能会消耗30点生命值
  *
- * write following format at skill's note:
- *  <hp_cost:30>  # the skill consumes 30 HP.
- *
- *  The skill can use even if subject's HP is less than skill's HP Cost.
- *  In that case, let the subject's HP be 1.
- *  (i.e. subject won't die by the skill.)
- */
-
-/*:ja
- * @plugindesc HP消費技
- * @author 神無月サスケ
- *
- * @help このプラグインには、プラグインコマンドはありません。
- *
- * 仕様：
- * スキルのメモ欄に「<hp_cost:30>」といった書式で書いてください。
- * この場合、HPを30消費します。
- *
- * 入力時や術使用時のHPが、消費HPより低い場合でも選択、実行可能で、
- * この場合使用後のHPは1になります。（つまり、この技で戦闘不能にはならない）
- *
- * - HPの消費は、技を使う前になされます。
- * - HPと同時に、MPやTPを消費する技も作成可能ですが、
- *  ウィンドウでは消費HPのみが表示されます。
+ *   如果施法者的生命值低于技能所需要的HP值，技能仍然可以释放，但此时施法者的生
+ *   命会降低到1点。
+ *   （即，施法者不会因为使用技能而死亡）
  */
 
 (function() {

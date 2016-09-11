@@ -3,30 +3,12 @@
 //=============================================================================
 
 /*:
- * @plugindesc make item/skill whose scope is both dead or alive.
+ * @plugindesc 制造一个可作用于死/生者的物品/技能。
  * @author Sasuke KANNAZUKI
- * 
- * @help This plugin does not provide plugin commands.
- * 
- * Skill/Item Note:
- *   <scope:oneDeadOrAlive>
- *   <scope:allDeadOrAlive>
- * usage example:
- *  - a skill that revive dead member with full HP,
- *   if use it to living menber, recover full HP.
- */
-/*:ja
- * @plugindesc 戦闘不能かどうかに関係なく、仲間に使える技/アイテムを作成
- * @author 神無月サスケ
  *
- * @help このプラグインにはプラグインコマンドはありません。
- *
- * スキル/アイテムのメモに以下のように書いてください
- * <scope:oneDeadOrAlive>  生死問わず仲間1体への効果になります
- * <scope:allDeadOrAlive>　生死問わず仲間全体への効果になります
- *
- * 使用例：
- * 死者をHP全快で蘇生させる技だが、生きている味方に使用してもHP全快する
+ * @help 技能、物品备注区：
+ *   <scope:oneDeadOrAlive> 复活一个队友并完全恢复生命，或完全恢复单个队友的生命
+ *   <scope:allDeadOrAlive> 复活所有队友并完全恢复生命，或完全恢复所有队友的生命
  */
 
 (function() {
@@ -67,7 +49,7 @@
 
   //
   // make status "dead or alive"
-  // 
+  //
   Game_Action.prototype.isDeadOrAlive = function() {
     return this.checkItemScope([20, 21]);
   };

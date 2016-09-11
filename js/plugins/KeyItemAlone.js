@@ -3,20 +3,9 @@
 //=============================================================================
 
 /*:
- * @plugindesc at Scene_Item, only display key items.
+ * @plugindesc 隐藏道具界面内除关键道具外的所有选项。
  * @author Sasuke KANNAZUKI
- * *
- * @help This plugin does not provide plugin commands.
- * 
  */
-/*:ja
- * @plugindesc アイテム選択画面で「大事なもの」のみ表示
- * @author 神無月サスケ
- * *
- * @help このプラグインに、プラグインコマンドはありません
- * 
- */
-
 
 (function() {
 

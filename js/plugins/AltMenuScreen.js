@@ -3,17 +3,11 @@
 //=============================================================================
 
 /*:
- * @plugindesc Alternative menu screen layout.
+ * @plugindesc 将菜单界面布局从纵向布局变为横向
  * @author Yoji Ojima
  *
- * @help This plugin does not provide plugin commands.
- */
-
-/*:ja
- * @plugindesc メニュー画面のレイアウトを変更します。
- * @author Yoji Ojima
- *
- * @help このプラグインには、プラグインコマンドはありません。
+ * @help 将菜单布局从纵向布局改为了横向布局。
+ * 演示了如何对菜单布局进行基础修改，可以用于学习如何修改界面。
  */
 
 (function() {

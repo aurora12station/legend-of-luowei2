@@ -3,65 +3,34 @@
 //=============================================================================
 
 /*:
- * @plugindesc play voice SE at battle when actor does spcified action
+ * @plugindesc 战斗界面内，当角色使用特定操作时，播放特定的音效
  * @author Sasuke KANNAZUKI
- * 
+ *
  * @param pitch
- * @desc pitch of SEs. this setting is common among all voice SEs.
+ * @desc 所有本插件所用到的音效的默认音调。
  * @default 100
  *
  * @param volume
- * @desc volume of SEs. this setting is common among all  voice SEs.
+ * @desc 所有本插件所用到的音效的默认音量。
  * @default 90
- * 
- * @help This plugin does not provide plugin commands.
- * 
- * note specification:
- * write down each actor's note at following format to set SE filename.
- * <attackVoice:filename>  plays when actor does normal attack.
- * <recoverVoice:filename>   plays when actor uses HP recovering magic.
- * <friendMagicVoice:filename> plays when actor spells magic for friend
- *  except HP recovering. if this is not set but <skillVoice:filename> is set,
- *   it plays <magicVoice:filename> setting file.
- * <magicVoice:filename>   plays when actor spells magic(except for friend).
- * <skillVoice:filename>   plays when actor uses special skill except magic.
- * <damageVoice:filename>    plays when actor takes damage.
- * <defeatedVoice:filename>   plays when actor is died.
- * <victoryVoice:filename>   plays when battle finishes.
- *  if plural actors attend the battle, randomly selected actor's SE is adopted.
  *
+ * @help 备注区说明：
+ * 按照以下格式在角色备注区填写字符串，从而设定这些角色的特定操作的音效
+ * <attackVoice:filename> 角色普通攻击时的音效
+ * <recoverVoice:filename> 角色使用生命恢复魔法的音效
+ * <friendMagicVoice:filename> 角色对友军使用魔法时的音效
+ *   关于角色使用生命恢复魔法的特别说明：
+ *     如果这个音效没有设置，而<skillVoice:filename>设置了音效，那么插件将会播
+ *     放<magicVoice:filename>字段设定的音效
+ * <magicVoice:filename> 角色释放魔法时的音效（对友军使用魔法时除外）
+ * <skillVoice:filename> 角色使用特殊技能时的音效（释放魔法时除外）
+ * <damageVoice:filename> 角色受到伤害时的音效
+ * <defeatedVoice:filename> 角色死亡时的音效
+ * <victoryVoice:filename> 战斗结束(胜利)时的音效
+ *   如果多个角色参与了同一场战斗，则插件会随机选择其中一个角色的音效来作为战
+ *   斗结束(胜利)时的音效
  */
-/*:ja
- * @plugindesc アクターの戦闘時の行動にボイスSEを設定します。
- * @author 神無月サスケ
- * 
- * @param pitch
- * @desc ボイスSEのピッチです。この設定が全てのボイスSEの共通となります。
- * @default 100
- *
- * @param volume
- * @desc ボイスSEのボリュームです。この設定が全てのボイスSEの共通となります。
- * @default 90
- * 
- * @help このプラグインには、プラグインコマンドはありません。
- * 
- * メモ設定方法:
- * それぞれのアクターのメモに以下の書式で書いてください。
- * filename はボイスSEのファイル名にしてください。
- *
- * <attackVoice:filename>  通常攻撃の時に再生されるボイスです。
- * <recoverVoice:filename>   HP回復魔法を使用した時に再生されるボイスです。
- * <friendMagicVoice:filename>   HP回復以外の味方向け魔法を使用した時に
- *  再生されるボイスです。省略された場合で<magicVoice:filename>が
- *  設定されている場合は、そちらが再生されます。
- * <magicVoice:filename> 味方向け以外の魔法を使用した時に再生されるボイスです。
- * <skillVoice:filename>   必殺技を使用した時に再生されるボイスです。
- * <damageVoice:filename>    ダメージを受けた時に再生されるボイスです。
- * <defeatedVoice:filename>   戦闘不能になった時に再生されるボイスです。
- * <victoryVoice:filename>   戦闘勝利時に再生されるボイスです。
- *  アクターが複数いる場合は、生きているアクターの中からランダムで再生されます。
- *
- */
+
 (function() {
 
   //

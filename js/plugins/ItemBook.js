@@ -3,73 +3,36 @@
 //=============================================================================
 
 /*:
- * @plugindesc Displays detailed statuses of items.
+ * @plugindesc 物品手册，显示物品的具体信息。
  * @author Yoji Ojima
  *
  * @param Unknown Data
- * @desc The index name for an unknown item.
+ * @desc 未发现的物品在手册中显示的名字。
  * @default ??????
  *
  * @param Price Text
- * @desc The text for "Price".
+ * @desc "价格"在手册中显示的名字。
  * @default Price
  *
  * @param Equip Text
- * @desc The text for "Equip".
+ * @desc "装备"在手册中显示的名字。
  * @default Equip
  *
  * @param Type Text
- * @desc The text for "Type".
+ * @desc "类型"在手册中显示的名字。
  * @default Type
  *
- * @help
+ * @help 插件指令：
+ *   ItemBook open            # 打开物品手册界面
+ *   ItemBook add weapon 3    # 将3号武器添加到物品手册中
+ *   ItemBook add armor 4     # 将4号防具添加到物品手册中
+ *   ItemBook remove armor 5  # 将5号防具从物品手册中删除
+ *   ItemBook remove item 6   # 将6号道具从物品手册中删除
+ *   ItemBook complete        # 解锁显示手册中所有物品
+ *   ItemBook clear           # 封禁显示手册中所有物品
  *
- * Plugin Command:
- *   ItemBook open            # Open the item book screen
- *   ItemBook add weapon 3    # Add weapon #3 to the item book
- *   ItemBook add armor 4     # Add armor #4 to the item book
- *   ItemBook remove armor 5  # Remove armor #5 from the item book
- *   ItemBook remove item 6   # Remove item #6 from the item book
- *   ItemBook complete        # Complete the item book
- *   ItemBook clear           # Clear the item book
- *
- * Item (Weapon, Armor) Note:
- *   <book:no>                # This item does not appear in the item book
- */
-
-/*:ja
- * @plugindesc アイテム図鑑です。アイテムの詳細なステータスを表示します。
- * @author Yoji Ojima
- *
- * @param Unknown Data
- * @desc 未確認のアイテムの索引名です。
- * @default ？？？？？？
- *
- * @param Price Text
- * @desc 「価格」の文字列です。
- * @default 価格
- *
- * @param Equip Text
- * @desc 「装備」の文字列です。
- * @default 装備
- *
- * @param Type Text
- * @desc 「タイプ」の文字列です。
- * @default タイプ
- *
- * @help
- *
- * プラグインコマンド:
- *   ItemBook open            # 図鑑画面を開く
- *   ItemBook add weapon 3    # 武器３番を図鑑に追加
- *   ItemBook add armor 4     # 防具４番を図鑑に追加
- *   ItemBook remove armor 5  # 防具５番を図鑑から削除
- *   ItemBook remove item 6   # アイテム６番を図鑑から削除
- *   ItemBook complete        # 図鑑を完成させる
- *   ItemBook clear           # 図鑑をクリアする
- *
- * アイテム（武器、防具）のメモ:
- *   <book:no>                # 図鑑に載せない場合
+ * 道具/武器/防具的备注：
+ *   <book:no>                # 该物品不会被展示在物品手册中
  */
 
 (function() {

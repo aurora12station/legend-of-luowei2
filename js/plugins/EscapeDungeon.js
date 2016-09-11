@@ -3,68 +3,33 @@
 //=============================================================================
 
 /*:
- * @plugindesc Escape to the specified position from a dungeon.
+ * @plugindesc 制作可以从一个地下城/副本中撤退到一个特殊的位置的物品/技能。
  * @author Sasuke KANNAZUKI
  *
  * @param mapIdVal
- * @desc variable id for escape map ID.
- * Escape is disabled when variable number mapIdVal equals 0.
+ * @desc 存有将要撤退到的地图ID的变量的ID
+ * 如果这个变量ID的值为0，则关闭撤退功能。
  * @default 21
- * 
+ *
  * @param xCoordVal
- * @desc variable id for escape x coordinate.
+ * @desc 存有将要撤退到的地图X坐标的变量的ID
  * @default 22
  *
  * @param yCoordVal
- * @desc variable id for escape y coordinate.
+ * @desc 存有将要撤退到的地图Y坐标的变量的ID
  * @default 23
  *
- * @help This plugin does not provide plugin commands.
+ * @help - 当玩家进入一个地下城/副本时，设置位置变量的值。
+ * - 当玩家离开地下城/副本时，记得关闭撤退功能。特别是当玩家被事件移动到另一个地
+ * 图时。（将存有将要撤退到的地图ID的变量的值改为0即可关闭逃离功能）
+ * - 如果玩家使用了撤退功能，那么撤退功能将会被本脚本自动被关闭。
  *
- * - Set the position variables when player enters the dungeon.
- * - Be sure to disable when player exits from the dungeon,
- *  especially when the player moves to other map by an event.
- *   (to disable this, let variables number mapIdVal be 0).
- * - After escape exection, escape is automatically disabled
+ * 注意：
+ * - 这个插件只支持在菜单界面使用，不支持在战斗界面使用。
+ * - 物品/技能的“范围”属性必须设置为“无”。
  *
- * check points:
- * - this plugin only for menu scene, cannot apply at battle scene.
- * - the scope must be 0(none).
- *
- * Item/Skill Note:
- * <ESCAPE> : the item/skill is for escape.
- */
-/*:ja
- * @plugindesc ダンジョンから特定の場所にエスケープ
- * @author 神無月サスケ
- *
- * @param mapIdVal
- * @desc 脱出するマップのIDを格納するゲーム変数番号
- * この値が 0 の時は、エスケープは出来ません。
- * @default 21
- * 
- * @param xCoordVal
- * @desc 脱出するマップのX座標用の変数を格納するゲーム変数番号
- * @default 22
- *
- * @param yCoordVal
- * @desc 脱出するマップのY座標用の変数を格納するゲーム変数番号
- * @default 23
- *
- * @help このプラグインにプラグインコマンドはありません。
- *
- * - プレイヤーがダンジョンに入る際に変数を設定してください。
- * - ダンジョンから出る時は、忘れずにエスケープ禁止にしてください。
- *  特にダンジョンからイベントで別の場所に行く場合は忘れずに。
- *   (mapIdVal の変数を 0 にしてください)。
- * - エスケープした後、自動的にエスケープ不可になります。
- *
- * チェックポイント:
- * - このプラグインはメニュー専用です。戦闘時は使用できません。
- * - 「範囲」は「なし」にしてください。
- *
- * アイテムや魔法のメモに以下を書くとエスケープとみなされます：
- * <ESCAPE>
+ * 物品/技能的备注区：
+ * <ESCAPE> 如果填写了这个标记，则说明当前物品/技能的效果是用于撤离的。
  */
 
 (function() {

@@ -3,25 +3,12 @@
 //=============================================================================
 
 /*:
- * @plugindesc Stores the ID of the actor who acted lastly to a variable.
+ * @plugindesc 保存最后一次行动的角色的ID到某个变量中
  * @author Yoji Ojima
  *
  * @param Variable ID
- * @desc The ID of the variable for storing the actor ID.
+ * @desc 用于保存最后一次行动的角色的变量ID
  * @default 0
- *
- * @help This plugin does not provide plugin commands.
- */
-
-/*:ja
- * @plugindesc 最後に行動したアクターのIDを変数に格納します。
- * @author Yoji Ojima
- *
- * @param Variable ID
- * @desc アクターIDを格納する変数のIDです。
- * @default 0
- *
- * @help このプラグインには、プラグインコマンドはありません。
  */
 
 (function() {

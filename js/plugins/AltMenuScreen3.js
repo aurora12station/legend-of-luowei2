@@ -3,140 +3,66 @@
 //=============================================================================
 
 /*:
- * @plugindesc Yet Another menu screen layout.
+ * @plugindesc AltMenuScreen2插件的升级版，界面布局插件。
  * @author Sasuke KANNAZUKI, Yoji Ojima
  * 
  * @default 
  * @param bgBitmapMenu
- * @desc background bitmap file at menu scene. put at img/pictures.
+ * @desc 菜单界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param bgBitmapItem
- * @desc background bitmap file at item scene. put at img/pictures.
+ * @desc 物品界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param bgBitmapSkill
- * @desc background bitmap file at skill scene. put at img/pictures.
+ * @desc 技能界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param bgBitmapEquip
- * @desc background bitmap file at equip scene. put at img/pictures.
+ * @desc 装备界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param bgBitmapStatus
- * @desc background bitmap file at status scene. put at img/pictures.
+ * @desc 状态界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param bgBitmapOptions
- * @desc background bitmap file at option scene. put at img/pictures.
+ * @desc 选项界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param bgBitmapFile
- * @desc background bitmap file at save/load scene. put at img/pictures.
+ * @desc 存档/读档界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param bgBitmapGameEnd
- * @desc background bitmap file at gameEnd scene. put at img/pictures.
+ * @desc 游戏结束界面的背景图片，放到img/pictures目录下
  * @default 
  * 
  * @param maxColsMenu
- * @desc max column at menu window
+ * @desc 菜单窗口的角色头像的纵列数量
  * @default 4
  * 
  * @param commandRows
- * @desc number of visible rows at command window
+ * @desc 指令窗口的按钮可见横行数量
  * @default 2
  *
  * @param isDisplayStatus
- * @desc whether display status or not. (1 = yes, 0 = no)
+ * @desc 是否显示角色状态（1 = 是，0 = 否）
  * @default 1
  * 
- * @help This plugin does not provide plugin commands.
- *  The differences with AltMenuscreen are follows:
- *   - windows are transparent at all menu scene.
- *   - it can set the background bitmap for each scenes at menu.
- *   - picture is actors' original
+ * @help 本插件与AltMenuscreen的不同:
+ *   - 所有界面窗口的背景默认都是透明的
+ *   - 本插件可以设置所有界面窗口的背景图
+ *   - 角色形象图片可自定义
  *
- * Actor' note:
- * <stand_picture:filename> set actor's standing picture at menu.
- *   put file at img/pictures.
+ * 角色备注区：
+ * <stand_picture:图片名字(不含后缀)> 设置角色的菜单形象图片
+ * 将文件放在img/pictures下。
  *
- * preferred size of actor's picture:
- * width: 174px(maxColsMenu=4), 240px(maxColsMenu=3)
- * height: 408px(commandRows=2), 444px(commandRows=1)
- */
-
-/*:ja
- * @plugindesc レイアウトの異なるメニュー画面
- * @author 神無月サスケ, Yoji Ojima
- * 
- * @param bgBitmapMenu
- * @desc メニュー背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param bgBitmapItem
- * @desc アイテム画面背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param bgBitmapSkill
- * @desc スキル画面背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param bgBitmapEquip
- * @desc 装備画面背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param bgBitmapStatus
- * @desc ステータス画面背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param bgBitmapOptions
- * @desc オプション画面背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param bgBitmapFile
- * @desc セーブ／ロード画面背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param bgBitmapGameEnd
- * @desc ゲーム終了画面背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param maxColsMenu
- * @desc アクターを表示するウィンドウの1画面の登録最大数です。
- * @default 4
- * 
- * @param commandRows
- * @desc コマンドウィンドウの行数です。
- * @default 2
- *
- * @param isDisplayStatus
- * @desc ステータスを表示するかしないかを選びます。(1 = yes, 0 = no)
- * @default 1
- * 
- * @help このプラグインには、プラグインコマンドはありません。
- *
- *  AltMenuscreen との違いは以下です:
- *  - メニュー画面すべてのウィンドウが透明です
- *  - メニューそれぞれのシーンに背景ビットマップを付けることが出来ます。
- *  - アクターに立ち絵を利用します。
- *
- * アクターのメモに以下のように書いてください:
- * <stand_picture:ファイル名> ファイル名が、そのアクターの立ち絵になります。
- *   ファイルは img/pictures に置いてください。
- *
- * 望ましいアクター立ち絵のサイズ：
- * 幅：3列:240px, 4列：174px
- * 高さ： コマンドウィンドウ 1行:444px 2行:408px
- *
+ * 角色菜单形象图片的最佳尺寸
+ * 宽度: 174像素(maxColsMenu=4), 240像素(maxColsMenu=3)
+ * 高度: 408像素(commandRows=2), 444像素(commandRows=1)
  */
 
 (function() {

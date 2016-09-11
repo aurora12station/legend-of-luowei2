@@ -3,66 +3,25 @@
 //=============================================================================
 
 /*:
- * @plugindesc display foreground tiling sprite
- * @author Sasuke KANNAZUKI (thanks to Yoji Ojima)
- * 
- * @help  This plugin does not provide plugin commands.
+ * @plugindesc 增加前景图
+ * @author Sasuke KANNAZUKI (感谢Yoji Ojima)
+ * @help "前景"类似远景图，但与远景图不同的是，前景是显示在地表之上的。
+ * 将想要显示的前景图放在img/parallaxes目录下。
  *
- * 'foreground' is like a parallax that displays over the map.
- * put bitmap file at img/parallaxes.
- *
- * Map Note:
- *  write down following 5 settings at map's note.
- *  <fgName:name>     name is the string, file name of tiling sprite. 
- *    if the name starts '!', it is regarded as "foreground zero".
- *    the filename is searched from img/parallaxes.
- *  <fgLoopX:number>  number is the flag of loop x. 0:no 1:yes
- *    if this is not written on the note, it'll be 0(=no).
- *  <fgLoopY:number>  number is the flag of loop y. 0:no 1:yes
- *    if this is not written on the note, it'll be 0(=no).
- *  <fgSx:number>     number is x scroll speed.
- *    when it doesn't loop x, this is ignored.
- *    if this is not written on the note, it'll be 0.
- *  <fgSy:number>     number is y scroll speed.
- *    when it doesn't loop y, this is ignored.
- *    if this is not written on the note, it'll be 0.
+ * 地图备注：
+ * 将以下5种参数填写到地图备注区。
+ *   <fgName:name>    # name，字符串，将要自动填充的前景图的文件名
+ *     如果name以"!"开始，则这个文件将会被作为"零前景"(？)。
+ *     前景图文件需要放在img/parallaxes目录下。
+ *   <fgLoopX:number> # number是loop x的模式判定参数，若不填写本项，默认为0。(0:不横向滚动 1:横向滚动)
+ *   <fgLoopY:number> # number是loop y的模式判定参数，若不填写本项，默认为0。(0:不横向滚动 1:横向滚动)
+ *   <fgSx:number>    # number是x轴的滚动速度，如果fgLoopX参数为0，则该项会被忽略，若不填写本项，默认为0。
+ *   <fgSy:number>    # number是y轴的滚动速度，如果fgLoopY参数为0，则该项会被忽略，若不填写本项，默认为0。
  * 
- * Ex.
+ * 填写示例：
  * <fgName:sample1><fgLoopX:1><fgLoopY:1>
  *
  * <fgName:!sample1>
- */
-
-/*:ja
- * @plugindesc マップに合わせてスクロールする近景の設定
- * @author 神無月サスケ (thanks to Yoji Ojima)
- * 
- * @help このプラグインにプラグインコマンドはありません。
- * 近景(foreground)は、マップの上に表示される遠景のようなものです。
- * 使用する画像ファイルは、img/parallaxes に置いてください。
- *
- * マップのメモ:
- *  以下の5項目を書いてください(設定項目は、遠景と似ています)。
- *  <fgName:ファイル名> 前景として使うファイル名です（拡張子なし）
- *    名前が '!'で始まる場合、遠景同様視差ゼロとなります。
- *    ファイルは img/parallaxes に置いてください
- *  <fgLoopX:数字> X座標にループするかどうか  (0:no 1:yes)。
- *    省略時は0(=no)になります。
- *  <fgLoopY:number> Y座標にループするかどうか  (0:no 1:yes)。
- *    省略時は0(=no)になります。
- *  <fgSx:数字>    X座標のスクロール速度です
- *    X座標にループしない場合は無視されます。
- *    省略時は0になります。
- *  <fgSy:数字>    Y座標のスクロール速度です
- *    Y座標にループしない場合は無視されます。
- *    省略時は0になります。
- * 
- * 例：
- * <fgName:sample1><fgLoopX:1><fgLoopY:1>
- * sample1.png が前景になり、斜め上にループします。
- *
- * <fgName:!sample1>
- * 視差ゼロで!sample1.png が表示されます。
  */
 
 (function() {

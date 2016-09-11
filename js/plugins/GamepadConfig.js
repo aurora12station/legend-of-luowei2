@@ -1,4 +1,4 @@
-//=============================================================================
+﻿//=============================================================================
 // Yanfly Engine Plugins - Gamepad Config
 // GamepadConfig.js
 // Version: 1.00
@@ -12,90 +12,88 @@ Yanfly.GamepadConfig = Yanfly.GamepadConfig || {};
 
 //=============================================================================
  /*:
- * @plugindesc v1.00 Allows players to adjust their button configuration
- * for gamepads.
+ * @plugindesc v1.00 允许玩家调整其游戏平板的按钮设置
  * @author Yanfly Engine Plugins
  *
  * @param Command Name
- * @desc This is the option name that appears in the main menu.
+ * @desc 在主菜单显示的进入本插件窗口的选项名字。
  * @default Gamepad Config
  *
  * @param Button Name
- * @desc This is how a button name will appear in the config menu.
+ * @desc 按钮在设置界面的名字的显示格式。
  * @default Button %1
  *
  * @param OK Button
- * @desc This is the command name for the OK button.
+ * @desc 确认按钮的指令名字。
  * @default OK / Talk
  *
  * @param OK Help
- * @desc This is the help description for the OK button.
- * @default Used to accept menu actions and talk to people.
+ * @desc 确认按钮的帮助信息。
+ * @default 用于向操作界面发送确认指令，也用于与游戏中的人物等互动、对话。
  *
  * @param Cancel Button
- * @desc Cancel Button
- * @desc This is the command name for the Cancel button.
+ * @desc 取消按钮的指令名字。
  * @default Cancel
  *
  * @param Cancel Help
- * @desc This is the help description for the Cancel button.
- * @default Used to cancel menu actions.
+ * @desc 取消按钮的帮助信息。
+ * @default 用于在操作界面发送取消指令。
  *
  * @param Shift Button
- * @desc This is the command name for the Shift button.
+ * @desc Shift按钮的指令名字。
  * @default Dash
  *
  * @param Shift Help
- * @desc This is the help description for the Shift button.
- * @default Hold this button to dash on the field.
+ * @desc Shift按钮的帮助信息。
+ * @default 按住这个按钮来让角色在游戏中用奔跑的方式移动。
  *
  * @param Menu Button
- * @desc This is the command name for the Menu button.
+ * @desc 菜单按钮的指令名字。
  * @default Menu
  *
  * @param Menu Help
- * @desc This is the help description for the Menu button.
- * @default Access the Main Menu from the field.
+ * @desc 菜单按钮的帮助信息。
+ * @default 用于呼出主菜单。
  *
  * @param PageUp Button
- * @desc This is the command name for the Page Up button.
+ * @desc Page Up按钮的指令名字。
  * @default Page Up
  *
  * @param PageUp Help
- * @desc This is the help description for the Page Up button.
- * @default Use it to quickly scroll up menus.
+ * @desc Page Up按钮的帮助信息
+ * @default 用这个按钮来快速对菜单执行翻页操作。
  *
  * @param PageDown Button
- * @desc This is the command name for the Page Down button.
+ * @desc Page Down按钮的指令名字。
  * @default Page Down
  *
  * @param PageDown Help
- * @desc This is the help description for the Page Down button.
- * @default Use it to quickly scroll down menus.
+ * @desc Page Down按钮的帮助信息
+ * @default 用这个按钮来快速对菜单执行翻页操作。
  *
  * @param Reset Default
- * @desc This is the command name to reset the config to default.
+ * @desc 将按钮设置恢复为默认状态的按钮的名字。
  * @default Reset to Default
  *
  * @param Reset Help
- * @desc This is the help description for the Reset button.
- * @default Returns your controller to default settings.
+ * @desc 将按钮设置恢复为默认状态的按钮的帮助信息。
+ * @default 重置你的按键配置。
  *
  * @param Finish Config
- * @desc This is the command name for the finish button.
+ * @desc 完成设置的按钮的名字。
  * @default Finish Configuration
  *
  * @param Finish Help
- * @desc This is the help description for the Finish button.
- * @default Are you done configuring your gamepad?
+ * @desc 完成设置的按钮的帮助信息。
+ * @default 你已经完成了对你的游戏平板的按键配置了吗？
  *
- * @help
- * Adds a "Gamepad Config" option to the Options Menu if a gamepad is detected.
- * Players can then adjust the button configuration to their liking and it will
- * be loaded automatically each time they play the game. Keep in mind that if
- * at any point where a Gamepad is not detected inside of the Option or Gamepad
- * Config menu, the game will automatically eject the player out the prevent
- * the player from being locked inside.
+ * @help 如果检测到玩家在使用游戏平板进行游戏，则在选项界面添加一个
+ * "Gamepad Config"的选项。
+ *
+ * 玩家可以按照他们的习惯来定制自己的按键配置，并且这些按键配置会自动在游戏开始
+ * 时被读取。
+ * 注意，如果在Option界面或者Gamepad Config界面内没有检测到游戏平板设备，游戏会
+ * 自动把玩家弹出设置界面，以防止玩家被锁在设置界面里。
  */
 //=============================================================================
 

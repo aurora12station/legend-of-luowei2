@@ -3,33 +3,19 @@
 //=============================================================================
 
 /*:
- * @plugindesc Automatically scrolls a 'battlebacks1' image.
+ * @plugindesc 自动滚动设置的战斗背景中的"battlebacks1"目录下的图片。
  * @author Yoji Ojima
  *
  * @param Scroll X Variable ID
- * @desc The ID of the variable for the horizontal scroll speed.
+ * @desc 控制水平滚动速度的变量的ID
  * @default 0
  *
  * @param Scroll Y Variable ID
- * @desc The ID of the variable for the vertical scroll speed.
+ * @desc 控制垂直滚动速度的变量的ID
  * @default 0
  *
- * @help This plugin does not provide plugin commands.
- */
-
-/*:ja
- * @plugindesc 戦闘背景（battlebacks1）を自動的にスクロールします。
- * @author Yoji Ojima
- *
- * @param Scroll X Variable ID
- * @desc 横スクロール速度を指定するための変数のIDです。
- * @default 0
- *
- * @param Scroll Y Variable ID
- * @desc 縦スクロール速度を指定するための変数のIDです。
- * @default 0
- *
- * @help このプラグインには、プラグインコマンドはありません。
+ * @help 演示了如何操作背景图片，使背景图片可以按照一定的速度来滚动。
+ * 可用于学习如何图层(精灵)的origin.x / origin.y属性。
  */
 
 (function() {

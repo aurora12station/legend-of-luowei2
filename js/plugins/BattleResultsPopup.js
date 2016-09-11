@@ -3,17 +3,13 @@
 //=============================================================================
 
 /*:
- * @plugindesc Displays a battle results window instead of text messages.
+ * @plugindesc 用一个战斗结果结算窗口来替代系统默认的文本战斗结果显示。
  * @author Yoji Ojima
  *
- * @help This plugin does not provide plugin commands.
- */
-
-/*:ja
- * @plugindesc 戦闘結果の表示をポップアップ形式に変更します。
- * @author Yoji Ojima
+ * @help 可用于学习自定义新的Window类，创建自定义窗口，使用战斗管理器
+ * (BattleManager)，修改游戏角色处理机制以及场景管理。
  *
- * @help このプラグインには、プラグインコマンドはありません。
+ * 此外将会学习到以上所有内容的链接和交互。
  */
 
 (function() {

@@ -3,49 +3,24 @@
 //=============================================================================
 
 /*:
- * @plugindesc Displays detailed statuses of enemies.
+ * @plugindesc 怪物手册，显示敌人的具体状态
  * @author Yoji Ojima
  *
  * @param Unknown Data
- * @desc The index name for an unknown enemy.
+ * @desc 未知的怪物显示在怪物手册中的名字
  * @default ??????
  *
- * @help
+ * @help 插件指令：
+ *   EnemyBook open         # 打开怪物手册界面
+ *   EnemyBook add 3        # 添加3号敌人到怪物手册
+ *   EnemyBook remove 4     # 从怪物手册中移除4号敌人
+ *   EnemyBook complete     # 完全解锁怪物手册
+ *   EnemyBook clear        # 清空怪物手册
  *
- * Plugin Command:
- *   EnemyBook open         # Open the enemy book screen
- *   EnemyBook add 3        # Add enemy #3 to the enemy book
- *   EnemyBook remove 4     # Remove enemy #4 from the enemy book
- *   EnemyBook complete     # Complete the enemy book
- *   EnemyBook clear        # Clear the enemy book
- *
- * Enemy Note:
- *   <desc1:foobar>         # Description text in the enemy book, line 1
- *   <desc2:blahblah>       # Description text in the enemy book, line 2
- *   <book:no>              # This enemy does not appear in the enemy book
- */
-
-/*:ja
- * @plugindesc モンスター図鑑です。敵キャラの詳細なステータスを表示します。
- * @author Yoji Ojima
- *
- * @param Unknown Data
- * @desc 未確認の敵キャラの索引名です。
- * @default ？？？？？？
- *
- * @help
- *
- * プラグインコマンド:
- *   EnemyBook open         # 図鑑画面を開く
- *   EnemyBook add 3        # 敵キャラ３番を図鑑に追加
- *   EnemyBook remove 4     # 敵キャラ４番を図鑑から削除
- *   EnemyBook complete     # 図鑑を完成させる
- *   EnemyBook clear        # 図鑑をクリアする
- *
- * 敵キャラのメモ:
- *   <desc1:なんとか>       # 説明１行目
- *   <desc2:かんとか>       # 説明２行目
- *   <book:no>              # 図鑑に載せない場合
+ * "敌人"备注区填写：
+ *   <desc1:foobar>         # 当前怪物在怪物手册第一行的描述文字
+ *   <desc2:blahblah>       # 当前怪物在怪物手册第二行的描述文字
+ *   <book:no>              # 设置当前怪物不在怪物手册中显示
  */
 
 (function() {

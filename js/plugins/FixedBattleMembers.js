@@ -3,27 +3,12 @@
 //=============================================================================
 
 /*:
- * @plugindesc Forbids formation change to the specified party members.
+ * @plugindesc 指定战斗界面中队伍的特定角色的位置无法被修改
  * @author Yoji Ojima
- *
- * @help
- *
- * Plugin Command:
- *   FixedBattleMembers 1       # Fixed battle members = the actor #1
- *   FixedBattleMembers 2 3     # Fixed battle members = the actor #2 and #3
- *   FixedBattleMembers         # Clears the fixed battle members
- */
-
-/*:ja
- * @plugindesc 指定したパーティメンバーの並び替えを禁止します。
- * @author Yoji Ojima
- *
- * @help
- *
- * プラグインコマンド:
- *   FixedBattleMembers 1       # アクター１番を固定メンバーにする
- *   FixedBattleMembers 2 3     # アクター２番と３番を固定メンバーにする
- *   FixedBattleMembers         # 固定メンバーの指定を解除する
+ * @help 插件指令
+ *   FixedBattleMembers 1       # 固定战斗成员：角色1
+ *   FixedBattleMembers 2 3     # 固定战斗成员：角色2、角色3
+ *   FixedBattleMembers         # 清除固定战斗成员
  */
 
 (function() {

@@ -3,33 +3,15 @@
 //=============================================================================
 
 /*:
- * @plugindesc make battle command that changes weapon.
+ * @plugindesc 增加一个在战斗中切换装备的指令
  * @author Sasuke KANNAZUKI
- * 
+ *
  * @param commandName
- * @desc command name that change equip
+ * @desc 切换装备的指令名称
  * @default Equip
  *
- * @help This plugin does not provide plugin commands.
- * 
- * - changable equips are only weapon(s) and shield.
- * - changing weapon doesn't consume turn.
- * 
- */
-
-/*:ja
- * @plugindesc 戦闘コマンドに装備変更を追加
- * @author 神無月サスケ
- * 
- * @param commandName
- * @desc 装備変更のコマンド名です。
- * @default 装備変更
- * 
- * @help このプラグインには、プラグインコマンドはありません。
- * 
- * - 変更可能なのは武器と盾だけです。
- * - 装備変更はターンを消費しません。
- * 
+ * @help - 可以切换的装备只有武器和护盾。
+ * - 切换武器不会消耗回合。
  */
 
 (function() {

@@ -5,16 +5,15 @@
 //=============================================================================
 
 /*:
- * @plugindesc Allows side view and front view battles in the same game
+ * @plugindesc 允许游戏中同时存在第一人称视角和第三人称视角的战斗方式。
  * @author Shaz
  *
- * @help This plugin does not provide plugin commands.
+ * @help 一个修改游戏视角的脚本，可用于学习脚本中关于“敌群”的处理逻辑。
  *
- * Prefix a troop name with SV to set battles with that troop to side view
- * Prefix a troop name with FV to set battles with that troop to front view
- * Prefix a troop name with RV to set a random view for each battle with that troop
- * Leave out the prefix to take the system default
- *
+ * 为一个敌群增加SV前缀来设置玩家与这个敌群的战斗视角是第三人称视角。
+ * 为一个敌群增加FV前缀来设置玩家与这个敌群的战斗视角是第一人称视角。
+ * 为一个敌群增加RV前缀来设置玩家与这个敌群的战斗视角是随机人称视角。
+ * 如果不设置前缀，则会使用系统默认的战斗视角。
  */
 
 (function() {

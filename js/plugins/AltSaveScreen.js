@@ -3,17 +3,9 @@
 //=============================================================================
 
 /*:
- * @plugindesc Alternative save/load screen layout.
+ * @plugindesc 修改存/读档界面的布局
  * @author Yoji Ojima
- *
- * @help This plugin does not provide plugin commands.
- */
-
-/*:ja
- * @plugindesc セーブ／ロード画面のレイアウトを変更します。
- * @author Yoji Ojima
- *
- * @help このプラグインには、プラグインコマンドはありません。
+ * @help 对存/读档界面进行修改的插件示例，可用于学习存/读档界面的大致修改方式
  */
 
 (function() {

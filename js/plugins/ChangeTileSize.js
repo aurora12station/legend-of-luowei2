@@ -5,34 +5,34 @@
 //=============================================================================
 
 /*:
- * @plugindesc Allows maps based on a grid size other than 48x48
+ * @plugindesc 允许游戏地图使用不等于48x48的地表格子大小来进行游戏
  * @author Shaz
  *
  * @param Tile Size
- * @desc Size of tiles (pixels)
+ * @desc 地表格子的尺寸(像素)
  * @default 48
  *
  * @param Tileset Image Folder
- * @desc Folder where the in-game tilesets are kept
+ * @desc 游戏内的地表纹理文件的存放目录
  * @default img/tilesets/
  *
  * @param Parallax Image Folder
- * @desc Folder where the in-game parallaxes are kept
+ * @desc 游戏内的远景图片文件的存放目录
  * @default img/parallaxes/
  *
- * @help This plugin does not provide plugin commands.
+ * @help
+ * 在你的项目中使用超过或者小于48x48的地图格子大小。
  *
- * To use the map editor with tiles of a size other than 48x48 in your project,
- * have two folders for tileset images.  The folder named in the plugin
- * parameters is for original, high-quality, final-sized tiles.  The
- * original folder, img/tilesets/ can contain a duplicate copy of each
- * tileset, shrunk or enlarged to 48x48 pixels per tile.  Quality in the
- * editor may be poorer, but the original tiles will be used in the game.
- * The img/tilesets folder can be cleared prior to distribution.
+ * 需要准备2个地表纹理目录，一个用于编辑器显示，一个用于真正的游戏。
  *
- * The same applies to the img/parallaxes folder if using a parallax map
- * with a grid size other than 48x48.
+ * 插件参数中填写的是游戏最终使用的地图格子大小的纹理保存目录，比如32x32、96x96
+ * img/tilesets/中则包含降低了质量的，尺寸为48x48的地表格子大小的纹理、装饰物
+ * 等资源。
  *
+ * 地表纹理在编辑器中看起来也许是低质量的，但在游戏中会恢复到你需要的正常状态。
+ * img/tilesets目录可以在发布前清空以压缩发布包的大小。
+ *
+ * img/parallaxes目录的设置和使用方法与img/tilesets类似。
  */
 
 (function() {

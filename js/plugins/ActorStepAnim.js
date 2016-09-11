@@ -5,14 +5,16 @@
 //=============================================================================
 
 /*:
- * @plugindesc Allows party leader/followers to have stepping anim on map
+ * @plugindesc 让玩家队伍的队长和队员在世界地图上有步行动画
  * @author Shaz
  *
- * @help This plugin does not provide plugin commands.
+ * @help 一个简单的对角色进行修改的插件，可以用于学习如何修改角色。
+ * 另外也可以用于学习如何读取备注区文本。
  *
- * Add <stepanim> to the note box of an Actor to turn on stepping animation
- * for the actor's sprite on the map, as the party leader or a follower.
+ * =============================================================================
  *
+ * 在角色的备注区中添加<stepanim>字符串，即可让这个角色在地图上会自动播放步行动
+ * 画。（前提是这个角色是玩家队伍的队长或者队员）
  */
 
 (function() {

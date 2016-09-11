@@ -3,29 +3,14 @@
 //=============================================================================
 
 /*:
- * @plugindesc Displays a window to select a common event.
+ * @plugindesc 显示一个窗口来选择公共事件
  * @author Yoji Ojima
  *
- * @help
- *
- * Plugin Command:
- *   EventSelector open       # Open the event selector window
- *   EventSelector add 3      # Add common event #3 to the selector
- *   EventSelector remove 4   # Remove common event #4 from the selector
- *   EventSelector clear      # Clear the event selector
- */
-
-/*:ja
- * @plugindesc コモンイベントを選択するウィンドウを表示します。
- * @author Yoji Ojima
- *
- * @help
- *
- * プラグインコマンド:
- *   EventSelector open       # イベント選択ウィンドウを開く
- *   EventSelector add 3      # コモンイベント３番をイベント選択に追加
- *   EventSelector remove 4   # コモンイベント４番をイベント選択から削除
- *   EventSelector clear      # イベント選択をクリア
+ * @help 插件指令:
+ *   EventSelector open       # 打开事件选择器
+ *   EventSelector add 3      # 添加3号公共事件到选择器中
+ *   EventSelector remove 4   # 从选择器中移除4号公共事件
+ *   EventSelector clear      # 清除时间选择器
  */
 
 (function() {

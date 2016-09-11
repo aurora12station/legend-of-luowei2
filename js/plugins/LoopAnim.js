@@ -5,19 +5,18 @@
 //=============================================================================
 
 /*:
- * @plugindesc Allows animations on the map to loop
+ * @plugindesc 在游戏场景内，为玩家或事件绑定循环播放的动画
  * @author Shaz
  *
  * @help
  *
- * Plugin Command:
- *   LoopAnim start event animid   # Start a looping animation on an event
- *   LoopAnim stop event           # Stop animation loop
- *
- *   event = number for specific event
- *   event = 0 for "this" event
- *   event = -1 for player
- *   event = $gameVariables.value(x) to get the event id from variable x
+ * 插件命令：
+ *   LoopAnim start event animid     # 开始在某个event身上循环播放动画
+ *   LoopAnim stop event             # 停止在某个event身上循环播放动画
+ *     event = 整数                    # 在特定事件身上循环播放动画
+ *     event = 0                       # 在当前事件身上循环播放动画
+ *     event = -1                      # 在玩家身上循环播放动画
+ *     event = $gameVariables.value(x) # 在变量x所指定的值的event身上循环播放动画
  */
 
 (function() {

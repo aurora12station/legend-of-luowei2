@@ -120,7 +120,7 @@ Window_TitleCommand.prototype.makeCommandList = function() {
 
 Window_TitleCommand.prototype.addHomePageCommand = function() {
     if (Yanfly.Param.HomePageUrl.length <= 0) return;
-		this.addCommand(Yanfly.Param.HomePageText, 'homePage');
+		// this.addCommand(Yanfly.Param.HomePageText, 'homePage');
 };
 
 //=============================================================================

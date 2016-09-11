@@ -3,76 +3,37 @@
 //=============================================================================
 
 /*:
- * @plugindesc Alternative menu screen layout.
+ * @plugindesc 将菜单界面布局从纵向布局变为横向，并且可以自主定制部分参数
  * @author Yoji Ojima, Sasuke KANNAZUKI
  * 
  * @param backGroundBitmap
- * @desc background bitmap file at img/pictures.
+ * @desc 位于img/pictures目录下的背景图
  * @default 
  * 
  * @param maxColsMenu
- * @desc max column at menu window
+ * @desc 菜单窗口的角色头像的纵列数量
  * @default 4
  * 
  * @param commandRows
- * @desc number of visible rows at command window
+ * @desc 指令窗口的按钮可见横行数量
  * @default 2
  *
  * @param isDisplayStatus
- * @desc whether display status or not. (1 = yes, 0 = no)
+ * @desc 是否显示角色状态（1 = 是，0 = 否）
  * @default 0
  * 
- * @help This plugin does not provide plugin commands.
- *  The differences with AltMenuscreen are follows:
- *   - windows are transparent
- *   - it can set the menu's background bitmap.
- *   - picture is actors' original
+ * @help 本插件与AltMenuscreen的不同:
+ *   - 本插件的窗口的背景默认是透明的
+ *   - 本插件可以设置窗口背景图
+ *   - 角色形象图片可自定义
  *
- * Actor' note:
- * <stand_picture:filename> set actor's standing picture at menu.
- *   put file at img/pictures.
+ * 角色备注区：
+ * <stand_picture:图片名字(不含后缀)> 设置角色的菜单形象图片
+ * 将文件放在img/pictures下。
  *
- * preferred size of actor's picture:
- * width: 174px(maxColsMenu=4), 240px(maxColsMenu=3)
- * height: 408px(commandRows=2), 444px(commandRows=1)
- */
-
-/*:ja
- * @plugindesc レイアウトの異なるメニュー画面
- * @author Yoji Ojima, 神無月サスケ
- * 
- * @param backGroundBitmap
- * @desc 背景にするビットマップファイルです。
- * img/pictures に置いてください。
- * @default 
- * 
- * @param maxColsMenu
- * @desc アクターを表示するウィンドウの1画面の登録最大数です。
- * @default 4
- * 
- * @param commandRows
- * @desc コマンドウィンドウの行数です。
- * @default 2
- *
- * @param isDisplayStatus
- * @desc ステータスを表示するかしないかを選びます。(1 = yes, 0 = no)
- * @default 0
- * 
- * @help このプラグインには、プラグインコマンドはありません。
- *
- *  AltMenuscreen との違いは以下です:
- *  - ウィンドウが透明です
- *  - 背景ビットマップを付けることが出来ます。
- *  - アクターに立ち絵を利用します。
- *
- * アクターのメモに以下のように書いてください:
- * <stand_picture:ファイル名> ファイル名が、そのアクターの立ち絵になります。
- *   ファイルは img/pictures に置いてください。
- *
- * 望ましいアクター立ち絵のサイズ：
- * 幅：3列:240px, 4列：174px
- * 高さ： コマンドウィンドウ 1行:444px 2行:408px
- *
+ * 角色菜单形象图片的最佳尺寸
+ * 宽度: 174像素(maxColsMenu=4), 240像素(maxColsMenu=3)
+ * 高度: 408像素(commandRows=2), 444像素(commandRows=1)
  */
 
 (function() {
